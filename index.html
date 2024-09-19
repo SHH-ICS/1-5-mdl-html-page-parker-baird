@@ -1,50 +1,62 @@
 <!DOCTYPE html>
-<!-- Uses a transparent header that draws on top of the layout's background -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-<style>
-  .demo-layout-transparent {
-    background: url('../assets/demos/transparent.jpg') center / cover;
-  }
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Title</title>
 
-  .demo-layout-transparent .mdl-layout__header,
-  .demo-layout-transparent .mdl-layout__drawer-button {
-    /* This background is dark, so we set text to white. Use 87% black instead if
-     your background is light. */
-    color: white;
-  }
-</style>
+  <!-- Favicon links -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
 
-<div class="demo-layout-transparent mdl-layout mdl-js-layout">
-  <header class="mdl-layout__header mdl-layout__header--transparent">
-  <!-- Colored FAB button with ripple -->
-  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
-    <i class="material-icons">add</i>
-  </button>
-    <div class="mdl-layout__header-row">
-      <!-- Title -->
-      <span class="mdl-layout-title">Title</span>
-      <!-- Add spacer, to align navigation to the right -->
-      <div class="mdl-layout-spacer"></div>
-      <!-- Navigation -->
-      <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="">Link</a>
-        <a class="mdl-navigation__link" href="">Link</a>
-        <a class="mdl-navigation__link" href="">Link</a>
-        <a class="mdl-navigation__link" href="">Link</a>
-      </nav>
+  <!-- Material Design Lite links -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</head>
+<body>
+  <h1>Welcome to my Awesome Webpage</h1>
+
+  <!-- Simple header with scrollable tabs -->
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <span class="mdl-layout-title">Enter your name: &nbsp;&nbsp;</span>
+
+        <form action="#">
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" id="sample1">
+            <label class="mdl-textfield__label" for="sample1">Text</label>
+          </div>
+        </form>
+
+        <button class="mdl-button mdl-js-button mdl-button--raised" onclick="window.location.href = 'tabone.html';">
+          Submit
+        </button>
+      </div>
+    </header>
+
+    <!-- Other content -->
+    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+      <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Red</a>
+      <a href="#scroll-tab-2" class="mdl-layout__tab">Purple</a>
+      <a href="#scroll-tab-3" class="mdl-layout__tab">Pink</a>
+      <a href="#scroll-tab-4" class="mdl-layout__tab">Blue</a>
+      <a href="#scroll-tab-5" class="mdl-layout__tab">Green</a>
+      <a href="#scroll-tab-6" class="mdl-layout__tab">Yellow</a>
     </div>
-  </header>
-  <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">Title</span>
-    <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
-    </nav>
+
+    <main class="mdl-layout__content">
+      <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+        <div class="page-content">
+          <button onclick="window.location.href = 'tabone.html';">Click here</button>
+        </div>
+      </section>
+      <!-- Additional sections for other tabs -->
+    </main>
   </div>
-  <main class="mdl-layout__content">
-  </main>
-</div>
+</body>
+</html>
+
